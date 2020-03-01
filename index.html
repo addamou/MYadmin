@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.tiny.cloud/css/codepen.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MyAdmin</title>
+</head>
+<body>
+    <nav class="blue lighten-1">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">MyAdmin</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Dashbord</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="categorie.html">Categories</a></li>
+                    <li><a href="comment.html">Comments</a></li>
+                    <li><a href="user.html">Users</a></li>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/4k-Backgrounds-Free-Download.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="image/0.jpeg"></a>
+                <a href="#name"><span class="white-text name">Abode Rabiou</span></a>
+                <a href="#email"><span class="white-text email">Arabiou@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="index.html"><i class="material-icons">view_quilt</i>Dashboard</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="categorie">Categories</a></li>
+        <li><a href="comment.html">Comments</a></li>
+        <li><a href="user.html">Users</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Account Controls</a></li>
+        <li><a class="waves-effect" href="#!">Logout</a></li>
+    </ul>
+    <!--contents-->
+    <content>
+        <div class="row">
+            <!--box 1-->
+            <div class="col s12 m3  center ">
+                <div class="card-panel small blue lighten-1 white-text" style="padding: 5px;">
+                    <i class="material-icons small">tag_faces</i>
+                    <h6>Mounthly Visitors</h6>
+                    <h5>35900</h5>
+                    <div class="progress">
+                        <div class="determinate white" style="width: 40%"></div>
+                    </div>
+                </div>
+            </div>
+            <!--box 2-->
+            <div class="col s12 m3 center ">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="material-icons small">mode_edit</i>
+                    <h6>Blog Posts</h6>
+                    <h5>207</h5>
+                    <div class="progress">
+                        <div class="determinate blue" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+            <!--box 3-->
+            <div class="col s12 m3 center ">
+                <div class="card-panel small blue lighten-1 white-text" style="padding: 5px;">
+                <i class="material-icons small">mode_comment</i>
+                <h6>Comments</h6>
+                <h5>2300</h5>
+                <div class="progress">
+                    <div class="determinate white" style="width: 35%"></div>
+                </div>
+                </div>
+            </div>
+            <!--box 4-->
+            <div class="col s12 m3 center ">
+                <div class="card-panel small" style="padding: 5px;">
+                    <i class="fa fa-users small"></i>
+                    <h6>Users</h6>
+                    <h5>410</h5>
+                    <div class="progress">
+                        <div class="determinate blue" style="width: 24%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--boite du diagramme-->
+        <div class="row blue lighten-4">
+           <div class="col s12 m8">
+                <div class="card center blue-text">
+                    <h4>Daily Visitors</h4>
+                    <div class="card">
+                        <canvas class="card-chart" id="main-toggle-line-chart" width="500" height="256"></canvas>
+                    </div>
+                </div>
+
+           </div>
+           <div class="col s12 m4">
+               <div class="card">
+                   <div class="card-title center blue-text">
+                       <h5>Latest Comments</h5>
+                   </div>
+                   <div>
+                        <ul class="collection">
+                            <li class="collection-item avatar">
+                                <img src="https://i.pinimg.com/originals/69/b8/8a/69b88ab487a9d96023b7514eb7b666f3.jpg" alt="image" class="circle">
+                                <span class="title">Rachida Zakou</span>
+                                <p>Lorem ipsum dolor sit amet consectetur... <br>
+                                    <span class="green-text">Aprouve</span><i class="material-icons">more_vert</i><span class="red-text">Deny</span>
+                                </p>
+                                
+                            </li>
+                            <li class="collection-item avatar">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Obama_portrait_crop.jpg/447px-Obama_portrait_crop.jpg" alt="image" class="circle">
+                                <span class="title">Barack Obama</span>
+                                <p>Lorem ipsum dolor sit amet consectetur... <br>
+                                    <span class="green-text">Aprouve</span><i class="material-icons">more_vert</i><span class="red-text">Deny</span>
+                                </p>
+                                
+                            </li>
+                            <li class="collection-item avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlvVi0cR3CGQntUIKjDrwL00g14ZcZLEyYogXL0Rwy7kVFEewM"
+                                    alt="image" class="circle">
+                                <span class="title">Barack Obama</span>
+                                <p>Lorem ipsum dolor sit amet consectetur... <br>
+                                    <span class="green-text">Aprouve</span><i class="material-icons">more_vert</i><span class="red-text">Deny</span>
+                                </p>
+                            </li>
+                        </ul>
+                   </div>
+               </div>
+           </div> 
+        </div>
+        <div class="row">
+            <div class="col s12 m8">
+                <div class="card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Categorie</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr class="grey lighten-4">
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td><button class="btn blue lighten-1 white-text">DETAILS</button></td>
+                            </tr>
+                            <tr>
+                                <td>Post Two</td>
+                                <td>Graphic Design</td>
+                                <td><button class="btn blue lighten-1 white-text">DETAILS</button></td>
+                            </tr>
+                            <tr class="grey lighten-4">
+                                <td>Post Three</td>
+                                <td>Web Development</td>
+                                <td><button class="btn blue lighten-1 white-text">DETAILS</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-title">
+                    <h5>Quick Todos</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="todo" type="text" class="validate">
+                        <label for="todo">Add Todo...</label>
+                    </div>
+                    <ul class="collection">
+                        <div class="">
+                            <li class="collection-item">
+                                <span class="title">Todo One</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                    
+                            <li class="collection-item">
+                                <span class="title">Todo Two</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                            <li class="collection-item">
+                                <span class="title">Todo Three</span>
+                                <span><i class="fa fa-times closeEnd green-text right" aria-hidden="true"></i>
+                                </span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>               
+            </div>
+        </div>
+        <!-- Modal partie -->
+        <!--modal 1-->
+        <div id="modal1" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add Post</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" id="textarea1">
+                                <label for="textarea1">Title</label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Select Option</option>
+                                <option value="1">Web developer</option>
+                                <option value="2">Students</option>
+                                <option value="3">Professional</option>
+                            </select>
+                            <label>Categry</label>
+                        </div>
+                    </form>               
+                </div>
+            <textarea> </textarea>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close btn waves-effect waves-green blue lighten-2 white-text">SUBMIT</a>
+            </div>
+        </div>
+        <!--modal 2-->
+        <div id="modal2" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add Category</h4>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" id="textarea1">
+                                <label for="textarea1">Title</label>
+                            </div>
+                            <a href="#!" class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                        </div>   
+                    </form>
+            </div>
+        </div>
+        <!--modal 3-->
+        <div id="modal3" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add User</h4>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" id="name1">
+                                <label for="name1">Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="email" id="email1">
+                                <label for="email1">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="password" id="password1">
+                                <label for="password1">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="password" id="pass2">
+                                <label for="pass2">Confirm Password</label>
+                            </div>
+                            <a href="#!"
+                                class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                        </div>
+                    </form>
+            </div>
+        </div>
+        <!--footer-->
+        <footer class="page-footer blue darken-2 center">
+                
+                   <p>MyAdmin Codeloccol © 2020</p> 
+                    <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large red">
+                            <i class="large material-icons">add</i>
+                        </a>
+                        <ul>
+                            <li><a class="btn-floating blue lighten-2  btn modal-trigger" href="#modal1"><i class="material-icons">mode_edit</i></a></li>
+                            
+                            <li><a class="btn-floating blue lighten-2 btn modal-trigger" href="#modal2"><i class="material-icons">folder</i></a></li>
+                            <li><a class="btn-floating blue lighten-2 btn modal-trigger" href="#modal3"><i class="fa fa-users"></i></a></li>
+                        </ul>
+                    </div>
+        </footer>
+        <!--les modaux-->  
+        
+        
+    </content>
+    
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        //sidnav
+        $(document).ready(function () {
+                $('.sidenav').sidenav();
+        });
+        //collapse
+        $(document).ready(function () {
+                $('.collapsible').collapsible();
+        });
+        //flottant
+        $(document).ready(function () {
+                $('.fixed-action-btn').floatingActionButton();
+        });
+        //modal
+        $(document).ready(function () {
+                $('.modal').modal();
+        });
+        
+        
+    </script>
+    <script>
+        
+    </script>
+    <!-- ChartJS -->
+    <script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?100"></script>
+    <script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?100"></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?100"></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?100"></script>
+    <!-- fin chatJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.2.0/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.tiny.cloud/css/codepen.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>MyAdmin</title>
+</head>
+
+<body style="padding: 0 !important; margin: 0!important;">
+    <nav class="blue lighten-1">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">MyAdmin</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">Dashbord</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="categorie.html">Categories</a></li>
+                    <li><a href="comment.html">Comments</a></li>
+                    <li><a href="user.html">Users</a></li>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i
+                            class="material-icons">menu</i></a>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/07/4k-Backgrounds-Free-Download.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="image/0.jpeg"></a>
+                <a href="#name"><span class="white-text name">Abode Rabiou</span></a>
+                <a href="#email"><span class="white-text email">Arabiou@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="index.html"><i class="material-icons">view_quilt</i>Dashboard</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="categorie.html">Categories</a></li>
+        <li><a href="comment.html">Comments</a></li>
+        <li><a href="user.html">Users</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Account Controls</a></li>
+        <li><a class="waves-effect" href="#!">Logout</a></li>
+    </ul>
+    <!--contents-->
+    <content class="post">
+        <!--tableau-->
+    <div class="container">
+        <h4 class="blue-text">Categories</h4>
+    </div>
+        <div class="container">
+            <div class="col s12 m12 card">
+                <table class="striped responsive-table post">
+                    <thead class="grey lighten-1 titre">
+                        <tr>
+                            <th>Title</th>
+                            <th>Date Created</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            
+                            <td>Web Developpement</td>
+                            <td>Oct 1, 2019</td>
+                            <td><button class="btn blue lighten-3 white-text">DETAILS</button></td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Graphic Design</td>
+                            <td>Oct 2, 2019</td>
+                            <td><button class="btn blue lighten-3 white-text">DETAILS</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Tech Gadgets</td>
+                            <td>Oct 5, 2019</td>
+                            <td><button class="btn blue lighten-3 white-text">DETAILS</button></td>
+                        </tr>
+                        <tr>
+                            
+                            <td>Other</td>
+                            <td>Oct 5, 2019</td>
+                            <td><button class="btn blue lighten-3 white-text">DETAILS</button></td>
+                        </tr>
+                        
+                    </tbody>
+
+                </table>
+                <ul class="pagination blue-text">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active blue"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modal partie -->
+        <!--modal 1-->
+        <div id="modal1" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add Post</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="text" id="textarea1">
+                                <label for="textarea1">Title</label>
+                            </div>
+                        </div>
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Select Option</option>
+                                <option value="1">Web developer</option>
+                                <option value="2">Students</option>
+                                <option value="3">Professional</option>
+                            </select>
+                            <label>Categry</label>
+                        </div>
+                    </form>
+                </div>
+                <textarea> </textarea>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close btn waves-effect waves-green blue lighten-2 white-text">SUBMIT</a>
+            </div>
+        </div>
+        <!--modal 2-->
+        <div id="modal2" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add Category</h4>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" id="textarea1">
+                            <label for="textarea1">Title</label>
+                        </div>
+                        <a href="#!"
+                            class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--modal 3-->
+        <div id="modal3" class="modal container">
+            <div class="modal-content black-text">
+                <h4 class="blue-text">Add User</h4>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" id="name1">
+                            <label for="name1">Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="email" id="email1">
+                            <label for="email1">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="password" id="password1">
+                            <label for="password1">Password</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="password" id="pass2">
+                            <label for="pass2">Confirm Password</label>
+                        </div>
+                        <a href="#!"
+                            class="modal-close btn waves-effect waves-green blue lighten-2 white-text right">SUBMIT</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--footer-->
+        <footer class="page-footer blue darken-2 center page1">
+
+            <p>MyAdmin Codeloccol © 2020</p>
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red">
+                    <i class="large material-icons">add</i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating blue lighten-2  btn modal-trigger" href="#modal1"><i
+                                class="material-icons">mode_edit</i></a></li>
+
+                    <li><a class="btn-floating blue lighten-2 btn modal-trigger" href="#modal2"><i
+                                class="material-icons">folder</i></a></li>
+                    <li><a class="btn-floating blue lighten-2 btn modal-trigger" href="#modal3"><i
+                                class="fa fa-users"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </content>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        //sidnav
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        //collapse
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+        //flottant
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+        //modal
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+
+
+    </script>
+    <script>
+
+    </script>
+    <!-- ChartJS -->
+    <script type="text/javascript" src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?100"></script>
+    <script type="text/javascript"
+        src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?100"></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?100"></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?100"></script>
+    <!-- fin chatJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.2.0/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+</body>
+
+</html>
