@@ -2,12 +2,6 @@ body{
     margin: 0;
     padding: 0;
 }
-.page1{
-    padding: 20px!important;
-    position: absolute !important;
-    bottom: 0 !important;
-    width: 100% !important;
-}
 .post{
     padding: 50px !important;
     margin-top: 100px !important;
