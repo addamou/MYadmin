@@ -105,7 +105,8 @@
                 <div class="card center blue-text">
                     <h4>Daily Visitors</h4>
                     <div class="card">
-                        <canvas class="card-chart" id="main-toggle-line-chart" width="500" height="256"></canvas>
+                        <canvas id="myChart" width="500" height="163"></canvas>
+                        
                     </div>
                 </div>
 
@@ -337,5 +338,46 @@
     <!-- fin chatJs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.2.0/tinymce.min.js"></script>
     <script>tinymce.init({ selector: 'textarea' });</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
+                datasets: [{
+                    label: 'Daily Visitor',
+                    data: [450, 410, 525, 460, 450, 500, 470, 470, 407, 500, 470, 520],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 3
+
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtHundred: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
 </body>
 </html>
